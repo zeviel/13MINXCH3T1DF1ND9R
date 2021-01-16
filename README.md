@@ -14,4 +14,4 @@ pip install colorama
 pip install amino.py
 !Для запуска/For starting!
 cd AminoChatIdFinder
-python AminoChatIdFinder
+python AminoChatIdFinder.py
