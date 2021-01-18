@@ -12,6 +12,7 @@ need for raids or spam bot made by me  Zevi/Monster
 - pkg install python2
 - pip install colorama
 - pip install amino.py
+- git clone https://github.com/LilZevi/AminoChatIdFinder
 - !Для запуска/For starting!
 - cd AminoChatIdFinder
 - python AminoChatIdFinder.py
