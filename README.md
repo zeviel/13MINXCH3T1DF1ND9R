@@ -5,13 +5,13 @@ AminoChatIdFinder/Искатель чат айди для Amino
 This is a code / script to find a chat idi private or normal general chat in amino
 need for raids or spam bot made by me  Zevi/Monster
 
-Termux
-apt update -y
-apt upgrade -y
-pkg install python
-pkg install python2
-pip install colorama
-pip install amino.py
-!Для запуска/For starting!
-cd AminoChatIdFinder
-python AminoChatIdFinder.py
+# Termux
+- apt update -y
+- apt upgrade -y
+- pkg install python
+- pkg install python2
+- pip install colorama
+- pip install amino.py
+- !Для запуска/For starting!
+- cd AminoChatIdFinder
+- python AminoChatIdFinder.py
