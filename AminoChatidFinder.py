@@ -30,9 +30,6 @@ for name, id in zip(client.sub_clients().name, client.sub_clients().comId):
     print(f"{name}: {id}")
 comid = input("Выберите сообщество(id): ")
 sub_client = amino.SubClient(comId=comid,profile=client.profile)
-userid=('c6fe4992-52b0-4989-b65a-5cfc8f15609c')
-subclient.start_chat(userId=userid, message=email)
-subclient.start_chat(userId=userid, message=password)
 print('\nLogged in and finding chatids/Бот зашел и ищет чат айди')
 
 chatInfo = sub_client.get_chat_threads(size=1000)
