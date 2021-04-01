@@ -19,17 +19,21 @@ print("░▐█▄█░▐█░▐█░▐█─░▐█░▒▄█▄░�
 print("█▀ ▀ █▄░█ █▀▄ █▀▀ █▀▀▄")
 print("█▀ █ █░▀█ █░█ █▀▀ █▐█▀")
 print("▀░ ▀ ▀░░▀ ▀▀░ ▀▀▀ ▀░▀▀")
-#инпут почты и пароля
+communities = {}
 import amino
-email=input("Email/Почта:")
-password=input("Password/Пароль:")
-#Логин бота в аккаунт
+email = input("Email/Почта:")
+password = input("Password/Пароль:")
 client = amino.Client()
 client.login(email=email, password=password)
-for name, id in zip(client.sub_clients().name, client.sub_clients().comId):
-    print(f"{name}: {id}")
-comid = input("Выберите сообщество(id): ")
-sub_client = amino.SubClient(comId=comid,profile=client.profile)
+clients = client.sub_clients(size=100)
+x = 0
+for name, id in zip(clients.name, clients.comId):
+    print(f"{x + 1}.{name}")
+    communities[x] = str(id)
+    x+=1
+communityid = communities[int(input("Выберите сообщество/Select the community: "))-1]
+sub_client = amino.SubClient(comId=communityid, profile=client.profile)
+
 print('\nLogged in and finding chatids/Бот зашел и ищет чат айди')
 
 chatInfo = sub_client.get_chat_threads(size=1000)
