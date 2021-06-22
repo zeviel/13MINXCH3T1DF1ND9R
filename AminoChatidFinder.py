@@ -24,7 +24,7 @@ if thechatidfinder == "1":
 		print('\nLogged in and finding public chat chatids/Бот зашел и ищет chatId публичных чатов')
 		chatInfo = sub_client.get_public_chat_threads(size=1000)
 		for title, chatId in zip(chatInfo.title, chatInfo.chatId):
-			print("Public ChatIds: ")
+		print("Public ChatIds: ")
 			print(f"{title}: {chatId}")
 	except:
 		pass
@@ -34,7 +34,7 @@ elif thechatidfinder == "2":
 		print('\nLogged in and finding chatids of the chats you are in/Бот зашел и ищет chatId чатов')
 		chatInfo = sub_client.get_chat_threads(size=1000)
 		for title, chatId in zip(chatInfo.title, chatInfo.chatId):
-			print("Chatids of the chats you are in: ")
+		print("Chatids of the chats you are in: ")
 			print(f"{title}: {chatId}")
 	except:
 		pass
