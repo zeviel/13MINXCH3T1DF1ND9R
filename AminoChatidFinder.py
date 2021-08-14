@@ -25,7 +25,7 @@ async def main():
 	if thechatidfinder == "1":
 		try:
 			print("Finding public chats chatId")
-			chats = sub_client.get_public_chat_threads(size=100)
+			chats = await sub_client.get_public_chat_threads(size=100)
 			for title, chatId in zip(chats.title, chats.chatId):
 				print(f"{title} >> {chatId}")
 		except:
@@ -34,7 +34,7 @@ async def main():
 	elif thechatidfinder == "2":
 		try:
 			print("Finding joined chats chatId")
-			chats = sub_client.get_chat_threads(size=100)
+			chats = await sub_client.get_chat_threads(size=100)
 			for title, chatId in zip(chats.title, chats.chatId):
 				print(f"{title} >> {chatId}")
 		except:
