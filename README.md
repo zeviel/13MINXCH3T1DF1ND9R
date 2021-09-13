@@ -1,5 +1,5 @@
 # AminoChatIdFinder
-AminoChatIdFinder/ Script For Amino, ChatId Finder.
+AminoChatIdFinder/Script For Amino, ChatId Finder.
 
 # Termux
 - apt update -y
