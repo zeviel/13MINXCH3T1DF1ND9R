@@ -7,7 +7,7 @@ AminoChatIdFinder/Script For Amino, ChatId Finder.
 - pkg install python
 - pip install colorama
 - pip install AminoLab
-- git clone https://github.com/LilZevi/AminoChatIdFinder
+- git clone https://github.com/deluvsushi/AminoChatIdFinder
 - !Для запуска/For starting!
 - cd AminoChatIdFinder
 - python AminoChatIdFinder.py
