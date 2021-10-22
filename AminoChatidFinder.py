@@ -3,8 +3,8 @@ import pyfiglet
 from colorama import init, Fore, Back, Style
 init()
 print(Fore.YELLOW)
-print("""Script by Lil Zevi
-Github : https://github.com/LilZevi""")
+print("""Script by deluvsushi
+Github : https://github.com/deluvsushi""")
 print(pyfiglet.figlet_format("aminochatidfinder", font="rectangles"))
 client = AminoLab.Client()
 email = input("Email >> ")
