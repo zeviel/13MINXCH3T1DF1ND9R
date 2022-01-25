@@ -1,38 +1,41 @@
-import AminoLab
-import pyfiglet
-from colorama import init, Fore, Back, Style
+import amino
+from colorama import init, Fore
+from pyfiglet import figlet_format
 init()
-print(Fore.YELLOW)
-print("""Script by deluvsushi
+print(f"""{Fore.YELLOW}Script by deluvsushi
 Github : https://github.com/deluvsushi""")
-print(pyfiglet.figlet_format("aminochatidfinder", font="rectangles"))
-client = AminoLab.Client()
-email = input("Email >> ")
-password = input("Password >> ")
-client.auth(email=email, password=password)
-clients = client.my_communities()
+print(figlet_format("aminochatidfinder", font="rectangles"))
+client = amino.Client()
+email = input("-- Email::: ")
+password = input("-- Password::: ")
+client.login(email=email, password=password)
+clients = client.sub_clients(start=0, size=100)
 for x, name in enumerate(clients.name, 1):
     print(f"{x}.{name}")
-ndc_Id = clients.ndc_Id[int(input("Select the community >> ")) - 1]
+com_id = clients.comId[int(input("-- Select the community::: ")) - 1]
+sub_client = amino.SubClient(comId=com_id, profile=client.profile)
+print(
+"""
+[1] Get Joined Chats ChatId
+[2] Get Public Chats ChatId
+"""
+)
+select = int(input("-- Select::: "))
 
-print("""[1] Get Joined Chats ChatId
-[2] Get Public Chats ChatId""")
-select = input("Select >> ")
-
-if select == "1":
+if select == 1:
     try:
-        joined_chats = client.my_chat_threads(ndc_Id=ndc_Id, size=100)
-        for title, thread_Id in zip(
-                joined_chats.title, joined_chats.thread_Id):
-            print(f"{title} >> {thread_Id}")
+        joined_chats = sub_client.get_chat_threads(start=0, size=100)
+        for chat_id, title in zip(
+                joined_chats.chatId, joined_chats.title):
+            print(f"-- {chat_id}:{title}")
     except Exception as e:
         print(e)
 
-elif select == "2":
+elif select == 2:
     try:
-        public_chats = client.get_public_chat_threads(ndc_Id=ndc_Id, size=100)
-        for title, thread_Id in zip(
-                public_chats.title, public_chats.thread_Id):
-            print(f"{title} >> {thread_Id}")
+        public_chats = client.get_public_chat_threads(start=0, size=100)
+        for chat_id, title in zip(
+                public_chats.chatId, public_chats.title):
+            print(f"-- {chat_id}:{title}")
     except Exception as e:
         print(e)
