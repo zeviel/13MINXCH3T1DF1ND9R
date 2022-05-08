@@ -4,7 +4,7 @@ from pyfiglet import figlet_format
 init()
 print(f"""{Fore.YELLOW}Script by deluvsushi
 Github : https://github.com/deluvsushi""")
-print(figlet_format("aminochatidfinder", font="rectangles"))
+print(figlet_format("13MINXCH3T1DF1ND9R", font="rectangles"))
 client = amino.Client()
 email = input("-- Email::: ")
 password = input("-- Password::: ")
