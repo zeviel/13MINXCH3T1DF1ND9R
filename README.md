@@ -1,5 +1,5 @@
-# AminoChatIdFinder
-AminoChatIdFinder/Script For Amino, ChatId Finder.
+# 13MINXCH3T1DF1ND9R
+ChatID finder bot for amino
 
 ## Termux
 ```shell
@@ -9,7 +9,7 @@ AminoChatIdFinder/Script For Amino, ChatId Finder.
 - pip install pyfiglet
 - pip install colorama
 - pip install amino.py
-- git clone https://github.com/deluvsushi/AminoChatIdFinder
-- cd AminoChatIdFinder
-- python AminoChatIdFinder.py
+- git clone https://github.com/deluvsushi/13MINXCH3T1DF1ND9R
+- cd 13MINXCH3T1DF1ND9R
+- python 13MINXCH3T1DF1ND9R.py
 ```
