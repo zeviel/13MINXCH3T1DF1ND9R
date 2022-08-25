@@ -2,8 +2,8 @@ import amino
 from colorama import init, Fore
 from pyfiglet import figlet_format
 init()
-print(f"""{Fore.YELLOW}Script by deluvsushi
-Github : https://github.com/deluvsushi""")
+print(f"""{Fore.YELLOW}Script by zeviel
+Github : https://github.com/zeviel""")
 print(figlet_format("13MINXCH3T1DF1ND9R", font="rectangles"))
 client = amino.Client()
 email = input("-- Email::: ")
